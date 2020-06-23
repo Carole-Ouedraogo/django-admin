@@ -49,3 +49,8 @@ def delete_post(request, post_id):
     post = Post.objects.get(id=post_id)
     post.delete()
     return redirect('post_list')
+
+
+def create_post(request):
+    form = PostForm()
+    return render(request, 'blog/post_form.html', {'form': form, 'type_of_request': 'New'})

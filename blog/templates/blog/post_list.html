@@ -11,6 +11,13 @@
   <p>{{ post.text|linebreaksbr }}</p>
 </div>
 {% endfor %}
- button
+
+<!-- Created a button to redirect to the create-new-post page -->
+
+<div >
+<h2>
+<a href="{% url 'create_post' %}" class="btn btn-primary btn-lg" role="button">Add New Post</a>
+</h2>
+</div>
 
 {% endblock %}
